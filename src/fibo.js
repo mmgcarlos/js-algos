@@ -28,6 +28,6 @@ const memoize = (fn) => {
 };
 
 module.exports = {
-  fibo,
+  fibo: memoize(fibo),
   memoize
 };
