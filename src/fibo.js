@@ -16,3 +16,7 @@ const fibo = (n) => {
 
   return computeFibo(n);
 };
+
+module.exports = {
+  fibo
+};
