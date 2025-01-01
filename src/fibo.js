@@ -17,6 +17,17 @@ const fibo = (n) => {
   return computeFibo(n);
 };
 
+const memoize = (fn) => {
+  const cache = {};
+  return (...args) => {
+      const jsonArg = JSON.stringify(args);
+      return jsonArg in cache
+        ? cache[jsonArg]
+        : (cache[jsonArg] = fn(...args));
+    };
+};
+
 module.exports = {
-  fibo
+  fibo,
+  memoize
 };
