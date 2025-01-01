@@ -1,5 +1,5 @@
 
-export const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
+const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
   for (let j = to; j > from; j--) {
     for (let i = from; i < j; i++) {
       if (arr[i] > arr[i + 1]) {
@@ -10,7 +10,7 @@ export const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
   return arr;
 };
 
-export const selectionSort = (arr, from = 0, to = arr.length - 1) => {
+const selectionSort = (arr, from = 0, to = arr.length - 1) => {
   for (let i = from; i < to; i++) {
     let min = i;
     for (let j = i + 1; j <= to; j++) {
@@ -21,4 +21,9 @@ export const selectionSort = (arr, from = 0, to = arr.length - 1) => {
     [arr[i],arr[min]] = [arr[min], arr[i]];
   }
   return arr;
+};
+
+module.exports = {
+  bubbleSort,
+  selectionSort
 };
