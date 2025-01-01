@@ -14,7 +14,7 @@ const selectionSort = (arr, from = 0, to = arr.length - 1) => {
   for (let i = from; i < to; i++) {
     let min = i;
     for (let j = i + 1; j <= to; j++) {
-      if (arr[j] < min) {
+      if (arr[j] < arr[min]) {
         min = j;
       }
     }
