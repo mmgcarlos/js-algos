@@ -37,5 +37,6 @@ const insertionSort = (arr, from = 0, to = arr.length - 1) => {
 
 module.exports = {
   bubbleSort,
-  selectionSort
+  selectionSort,
+  insertionSort
 };
