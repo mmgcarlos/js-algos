@@ -4,11 +4,11 @@
   "description": "Common algos in js",
   "scripts": {
     "test": "jest",
-    "lint": "jslint 'src/**/*.js' 'tests/**/*.js'"
+    "lint": "eslint 'src/**/*.js' 'tests/**/*.js'"
   },
   "devDependencies": {
     "jest": "^29.0.0",
-    "jslint": "^0.12.0"
+    "eslint": "^9.17.0"
   },
   "jest": {
     "testEnvironment": "node",
