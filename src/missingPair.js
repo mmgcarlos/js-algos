@@ -24,6 +24,9 @@ const missingPair = (arr, from = 0, to = arr.length - 1) => {
     }
     expectPair = !expectPair;
   }
+  if (arr.length > 1 && expectPair) {
+    return [arr.length - 1, arr.length - 1];
+  }
   return [];
 };
 
