@@ -17,7 +17,7 @@ const missingPair = (arr) => {
       return [];
    }
    let key = keys[0];
-   return [key, count[key]];
+   return [parseInt(key), count[key]];
 };
 
 module.exports = {
