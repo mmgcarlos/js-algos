@@ -6,10 +6,10 @@
 const missingPair = (arr) => {
    let count = {};
    arr.forEach((x, index) => {
-     if (count.x) {
-       delete count.x;
+     if (count[x]) {
+       delete count[x];
      } else {
-       count.x = index;
+       count[x] = index;
      }
    });
    let keys = Object.keys(count);
