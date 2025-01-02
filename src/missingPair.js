@@ -1,3 +1,8 @@
+// Finds the value which does not have
+// a pair in the array. It modifies the
+// original array. Returns the value and
+// position of the element. 
+
 const missingPair = (arr, from = 0, to = arr.length - 1) => {
   let expectPair = false;
   for (let i = from; i < to; i++) {
