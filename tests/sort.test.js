@@ -1,4 +1,4 @@
-const { bubbleSort, selectionSort } = require('../src/sort');
+const { bubbleSort, selectionSort, insertionSort } = require('../src/sort');
 
 describe('Sorting Functions', () => {
 
@@ -24,5 +24,17 @@ describe('Sorting Functions', () => {
 
   test('selectionSort sorts the array correctly', () => {
     expect(selectionSort([10, 2, 6, 4])).toEqual([2, 4, 6, 10]);
+  });
+
+  test('insertionSort sorts empty array', () => {
+    expect(insertionSort([])).toEqual([]);
+  });
+
+  test('insertionSort sorts a size 1 array correctly', () => {
+    expect(insertionSort([5])).toEqual([5]);
+  });
+
+  test('insertionSort sorts the array correctly', () => {
+    expect(insertionSort([10, 2, 6, 4])).toEqual([2, 4, 6, 10]);
   });
 });
