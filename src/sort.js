@@ -23,6 +23,18 @@ const selectionSort = (arr, from = 0, to = arr.length - 1) => {
   return arr;
 };
 
+const insertionSort = (arr, from = 0, to = arr.length - 1) => {
+  for (let i = from; i < to; i++) {
+    let tmp = arr[i + 1];
+    let j = i;
+    for (;j >= 0 && arr[j] > tmp; j--) {
+      arr[j+1] = arr[j];
+    }
+    arr[j+1] = tmp;
+  }
+  return arr;
+};
+
 module.exports = {
   bubbleSort,
   selectionSort
