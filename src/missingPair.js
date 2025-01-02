@@ -23,6 +23,6 @@ const missingPair = (arr, from = 0, to = arr.length - 1) => {
   return [];
 };
 
-module.export = {
+module.exports = {
   missingPair
 };
