@@ -6,10 +6,21 @@ module.exports = [
     languageOptions: {
       ecmaVersion: 2021, // Supports modern JavaScript
       sourceType: "script", // CommonJS module support
-    },
-    env: {
-      node: true, // Enables Node.js globals
-      jest: true, // Enables Jest globals
+      globals: {
+        // Enables Node.js globals
+        process: true,
+        __dirname: true,
+        module: true,
+        require: true,
+        exports: true,
+
+        // Enables Jest globals
+        describe: true,
+        test: true,
+        it: true,
+        expect: true,
+        jest: true,
+      },
     },
     rules: {
       // Add custom rules here if needed
