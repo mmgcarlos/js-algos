@@ -19,7 +19,7 @@ describe('Find missing pair', () => {
   });
 
   test('There is a missing at the end', () => {
-    expect(missingPair([5, 4, 6, 4, 6, 5, 9])).toEqual([9, 5]);
+    expect(missingPair([5, 4, 6, 4, 6, 5, 9])).toEqual([9, 6]);
   });
 
   test('There is a missing pair at the beginnig', () => {
