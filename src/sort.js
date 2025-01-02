@@ -1,10 +1,15 @@
 
 const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
   for (let j = to; j > from; j--) {
+    let swap = false;
     for (let i = from; i < j; i++) {
       if (arr[i] > arr[i + 1]) {
         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+        swap = true;
       }
+    }
+    if (!swap) {
+      return arr;
     }
   }
   return arr;
