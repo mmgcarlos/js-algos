@@ -6,7 +6,7 @@
 const missingPair = (arr) => {
    let count = {};
    arr.forEach((x, index) => {
-     if (count[x]) {
+     if (count[x] !== undefined) {
        delete count[x];
      } else {
        count[x] = index;
