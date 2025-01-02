@@ -4,6 +4,10 @@
 // position of the element. 
 
 const missingPair = (arr, from = 0, to = arr.length - 1) => {
+  if (from === 0 && to === 0) {
+    return[arr[0], 0];
+  }
+  
   let expectPair = false;
   for (let i = from; i < to; i++) {
     let min = i;
