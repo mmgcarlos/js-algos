@@ -12,9 +12,13 @@ const missingPair = (arr) => {
        count.x = index;
      }
    });
-   let key = Object.keys(count)[0];
+   let keys = Object.keys(count);
+   if (keys.length === 0) {
+      return [];
+   }
+   let key = keys[0];
    return [key, count.key];
-}
+};
 
 module.exports = {
   missingPair
