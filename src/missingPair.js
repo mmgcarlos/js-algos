@@ -3,32 +3,18 @@
 // original array. Returns the value and
 // position of the element. 
 
-const missingPair = (arr, from = 0, to = arr.length - 1) => {
-  if (from === 0 && to === 0) {
-    return[arr[0], 0];
-  }
-  
-  let expectPair = false;
-  for (let i = from; i < to; i++) {
-    let min = i;
-    for (let j = i + 1; j <= to; j++) {
-      if (arr[j] < arr[min]) {
-        min = j;
-      }
-    }
-    [arr[i],arr[min]] = [arr[min], arr[i]];
-    if (expectPair) {
-      if (arr[i] !== arr[i - 1]) {
-        return [arr[i - 1], i-1];
-      }
-    }
-    expectPair = !expectPair;
-  }
-  if (arr.length > 1 && arr.length % 2 === 1) {
-    return [arr[arr.length - 1], arr.length - 1];
-  }
-  return [];
-};
+const missingPair = (arr) => {
+   let count = {};
+   arr.forEach((x, index) => {
+     if (count.x) {
+       delete count.x;
+     } else {
+       count.x = index;
+     }
+   });
+   let key = Object.keys(count)[0];
+   return [key, count.key];
+}
 
 module.exports = {
   missingPair
