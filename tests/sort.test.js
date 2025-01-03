@@ -9,6 +9,12 @@ describe('Sorting Functions', () => {
   test('pivot of array of size 1 is zero', () => {
     expect(pivot([4])).toEqual(0);
   });
+
+  test('pivot of array', () => {
+    const arr = [4, 6, 7, 2, 0, 1, 8];
+    expect(pivot(arr)).toEqual(2);
+    expect(arr).toEqual([0, 1, 7, 2, 6, 4, 8]);
+  });
   
   test('bubbleSort sorts empty array', () => {
     expect(bubbleSort([])).toEqual([]);
