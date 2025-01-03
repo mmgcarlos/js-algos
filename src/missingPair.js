@@ -1,6 +1,5 @@
 // Finds the value which does not have
-// a pair in the array. It modifies the
-// original array. Returns the value and
+// a pair in the array. Returns the value and
 // position of the element. 
 
 const missingPair = (arr) => {
