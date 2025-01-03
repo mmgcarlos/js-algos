@@ -27,6 +27,7 @@ const quickSort = (arr, from = 0, to = arr.length - 1) => {
   let pivotPos = pivot(arr, from, to);
   quickSort(arr, from, pivotPos - 1);
   quickSort(arr, pivotPos, to);
+  return arr;
 };
 
 const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
