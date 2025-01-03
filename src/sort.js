@@ -1,5 +1,5 @@
 const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
-  if (low >= right) {
+  if (low >= high) {
     return low;
   }
   if (pivot === undefined) {
