@@ -7,7 +7,7 @@ describe('Sorting Functions', () => {
   });
 
   test('pivot of array of size 1 is zero', () => {
-    expect(pivot([4])).toEquato(0);
+    expect(pivot([4])).toEqual(0);
   });
   
   test('bubbleSort sorts empty array', () => {
