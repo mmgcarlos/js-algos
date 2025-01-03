@@ -2,6 +2,10 @@ const { bubbleSort, selectionSort, insertionSort } = require('../src/sort');
 
 describe('Sorting Functions', () => {
 
+  test('pivot of empty array is undefined', () => {
+    expect(pivot([])).toEqual(undefined);
+  });
+  
   test('bubbleSort sorts empty array', () => {
     expect(bubbleSort([])).toEqual([]);
   });
