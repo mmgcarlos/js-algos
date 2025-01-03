@@ -1,4 +1,4 @@
-const { pivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
+const { quickSort, pivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
 
 describe('Sorting Functions', () => {
 
@@ -38,6 +38,10 @@ describe('Sorting Functions', () => {
     const arr = [0, 8, 7, 2, 4, 1, 6];
     expect(pivot(arr, undefined, undefined, 0)).toEqual(0);
     expect(arr).toEqual([0, 8, 7, 2, 4, 1, 6]);
+  });
+
+  test('quickSort sorts empty array', () => {
+    expect(quickSort([])).toEqual([]);
   });
   
   test('bubbleSort sorts empty array', () => {
