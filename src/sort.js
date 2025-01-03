@@ -1,3 +1,19 @@
+const pivot = (arr, low = 0, high = arr.length, pivot) => {
+  if (low > right) {
+    return;
+  }
+  if (pivot === undefined) {
+    pivot =  arr[(low + high)/2];
+  }
+  let i = low ;
+  let j = high;
+  while (i < j) {
+    while (arr[i] < pivot) { i++; }
+    while (arr[j] >= pivot) { j--; }
+    if (i < j) {
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+};
 
 const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
   for (let j = to; j > from; j--) {
@@ -43,5 +59,6 @@ const insertionSort = (arr, from = 0, to = arr.length - 1) => {
 module.exports = {
   bubbleSort,
   selectionSort,
-  insertionSort
+  insertionSort,
+  pivot
 };
