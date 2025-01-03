@@ -1,4 +1,4 @@
-const { bubbleSort, selectionSort, insertionSort } = require('../src/sort');
+const { pivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
 
 describe('Sorting Functions', () => {
 
