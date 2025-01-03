@@ -16,6 +16,18 @@ describe('Sorting Functions', () => {
     expect(arr).toEqual([1, 0, 7, 2, 6, 4, 8]);
   });
   
+  test('rigth pivot of array', () => {
+    const arr = [4, 8, 7, 2, 0, 1, 6];
+    expect(pivot(arr, undefined, undefined, 6)).toEqual(4);
+    expect(arr).toEqual([4, 1, 0, 2, 7, 8, 6]);
+  });
+
+  test('rigth pivot of array is max', () => {
+    const arr = [4, 6, 7, 2, 0, 1, 8];
+    expect(pivot(arr, undefined, undefined, 8)).toEqual(6);
+    expect(arr).toEqual([4, 6, 7, 2, 0, 1, 8]);
+  });
+  
   test('bubbleSort sorts empty array', () => {
     expect(bubbleSort([])).toEqual([]);
   });
