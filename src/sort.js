@@ -1,6 +1,6 @@
 const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
-  if (low > right) {
-    return;
+  if (low >= right) {
+    return low;
   }
   if (pivot === undefined) {
     pivot = arr[(low + high)/2];
@@ -14,6 +14,7 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
   }
+  return i;
 };
 
 const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
