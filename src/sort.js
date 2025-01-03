@@ -20,6 +20,15 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   return i;
 };
 
+const quickSort = (arr, from = 0, to = arr.length - 1) => {
+  if (from >= to) {
+    return;
+  }
+  let pivotPos = pivot(arr, from, to);
+  quickSort(arr, from, pivotPos - 1);
+  quickSort(arr, pivotPos, to);
+};
+
 const bubbleSort = (arr, from = 0, to = arr.length - 1) => {
   for (let j = to; j > from; j--) {
     let swap = false;
@@ -65,5 +74,6 @@ module.exports = {
   bubbleSort,
   selectionSort,
   insertionSort,
-  pivot
+  pivot,
+  quickSort
 };
