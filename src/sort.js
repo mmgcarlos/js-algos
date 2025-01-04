@@ -12,9 +12,11 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   let j = high;
   while (i < j) {
     while (arr[i] < pivot) { i++; }
-    while (arr[j] >= pivot) { j--; }
+    while (arr[j] > pivot) { j--; }
     if (i < j) {
       [arr[i], arr[j]] = [arr[j], arr[i]];
+      i++;
+      j--;
     }
   }
   return i;
