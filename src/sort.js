@@ -6,7 +6,7 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
     return low;
   }
   if (pivot === undefined) {
-    pivot = arr[Math.floor((low + high)/2)];
+    pivot = arr[Math.floor((low + high) / 2)];
   }
   let i = low - 1;
   let j = high + 1;
@@ -19,12 +19,11 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
 };
 
 const quickSort = (arr, from = 0, to = arr.length - 1) => {
-  if (from >= to) {
-    return arr;
+  if (from < to) {
+    let pivotPos = pivot(arr, from, to);
+    quickSort(arr, from, pivotPos - 1);
+    quickSort(arr, pivotPos, to);
   }
-  let pivotPos = pivot(arr, from, to);
-  quickSort(arr, from, pivotPos - 1);
-  quickSort(arr, pivotPos, to);
   return arr;
 };
 
