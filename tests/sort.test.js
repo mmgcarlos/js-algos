@@ -43,6 +43,10 @@ describe('Sorting Functions', () => {
   test('quickSort sorts empty array', () => {
     expect(quickSort([])).toEqual([]);
   });
+
+  test('quickSort sorts array of size 1', () => {
+    expect(quickSort([1])).toEqual([1]);
+  });
   
   test('bubbleSort sorts empty array', () => {
     expect(bubbleSort([])).toEqual([]);
