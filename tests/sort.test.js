@@ -1,42 +1,42 @@
-const { quickSort, pivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
+const { quickSort, hoarePivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
 
 describe('Sorting Functions', () => {
 
-  test('pivot of empty array is undefined', () => {
-    expect(pivot([])).toEqual(undefined);
+  test('hoarePivot of empty array is undefined', () => {
+    expect(hoarePivot([])).toEqual(undefined);
   });
 
-  test('pivot of array of size 1 is zero', () => {
-    expect(pivot([4])).toEqual(0);
+  test('hoarePivot of array of size 1 is zero', () => {
+    expect(hoarePivot([4])).toEqual(0);
   });
 
-  test('pivot of array', () => {
+  test('hoarePivot of array', () => {
     const arr = [4, 6, 7, 2, 0, 1, 8];
-    expect(pivot(arr)).toEqual(2);
+    expect(hoarePivot(arr)).toEqual(2);
     expect(arr).toEqual([1, 0, 2, 7, 6, 4, 8]);
   });
   
-  test('rigth pivot of array', () => {
+  test('rigth hoarePivot of array', () => {
     const arr = [4, 8, 7, 2, 0, 1, 6];
-    expect(pivot(arr, undefined, undefined, 6)).toEqual(4);
+    expect(hoarePivot(arr, undefined, undefined, 6)).toEqual(4);
     expect(arr).toEqual([4, 6, 1, 2, 0, 7, 8]);
   });
 
-  test('rigth pivot of array is max', () => {
+  test('rigth hoarePivot of array is max', () => {
     const arr = [4, 6, 7, 2, 0, 1, 8];
-    expect(pivot(arr, undefined, undefined, 8)).toEqual(6);
+    expect(hoarePivot(arr, undefined, undefined, 8)).toEqual(6);
     expect(arr).toEqual([4, 6, 7, 2, 0, 1, 8]);
   });
 
-  test('left pivot of array', () => {
+  test('left hoarePivot of array', () => {
     const arr = [4, 8, 7, 2, 0, 1, 6];
-    expect(pivot(arr, undefined, undefined, 4)).toEqual(2);
+    expect(hoarePivot(arr, undefined, undefined, 4)).toEqual(2);
     expect(arr).toEqual([1, 0, 2, 7, 8, 4, 6]);
   });
 
-  test('left pivot of array is min', () => {
+  test('left hoarePivot of array is min', () => {
     const arr = [0, 8, 7, 2, 4, 1, 6];
-    expect(pivot(arr, undefined, undefined, 0)).toEqual(0);
+    expect(hoarePivot(arr, undefined, undefined, 0)).toEqual(0);
     expect(arr).toEqual([0, 8, 7, 2, 4, 1, 6]);
   });
 
