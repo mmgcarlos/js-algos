@@ -8,18 +8,15 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   if (pivot === undefined) {
     pivot = arr[Math.floor((low + high)/2)];
   }
-  let i = low ;
-  let j = high;
+  let i = low - 1;
+  let j = high + 1;
   while (i <= j) {
-    while (arr[i] < pivot) { i++; }
-    while (arr[j] > pivot) { j--; }
-    if (i <= j) {
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-      i++;
-      j--;
-    }
+    do { i++; } while (arr[i] < pivot);
+    do { j--; } while (arr[j] > pivot);
+    if (i >= j) { return j; }
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-  return i;
+  return j;
 };
 
 const quickSort = (arr, from = 0, to = arr.length - 1) => {
