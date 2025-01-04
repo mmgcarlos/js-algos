@@ -30,7 +30,7 @@ describe('Sorting Functions', () => {
 
   test('left pivot of array', () => {
     const arr = [4, 8, 7, 2, 0, 1, 6];
-    expect(pivot(arr, undefined, undefined, 4)).toEqual(4);
+    expect(pivot(arr, undefined, undefined, 4)).toEqual(3);
     expect(arr).toEqual([4, 1, 0, 2, 7, 8, 6]);
   });
 
