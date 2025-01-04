@@ -21,8 +21,8 @@ const hoarePivot = (arr, low = 0, high = arr.length - 1, pivot) => {
 const quickSort = (arr, from = 0, to = arr.length - 1, pivotFunc = hoarePivot) => {
   if (from < to) {
     let pivotPos = pivotFunc(arr, from, to);
-    quickSort(arr, from, pivotPos - 1);
-    quickSort(arr, pivotPos, to);
+    quickSort(arr, from, pivotPos);
+    quickSort(arr, pivotPos + 1, to);
   }
   return arr;
 };
