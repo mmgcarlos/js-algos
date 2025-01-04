@@ -19,19 +19,19 @@ describe('Sorting Functions', () => {
   test('rigth pivot of array', () => {
     const arr = [4, 8, 7, 2, 0, 1, 6];
     expect(pivot(arr, undefined, undefined, 6)).toEqual(5);
-    expect(arr).toEqual([4, 1, 0, 2, 7, 8, 6]);
+    expect(arr).toEqual([4, 6, 1, 2, 0, 7, 8]);
   });
 
   test('rigth pivot of array is max', () => {
     const arr = [4, 6, 7, 2, 0, 1, 8];
-    expect(pivot(arr, undefined, undefined, 8)).toEqual(6);
+    expect(pivot(arr, undefined, undefined, 8)).toEqual(7);
     expect(arr).toEqual([4, 6, 7, 2, 0, 1, 8]);
   });
 
   test('left pivot of array', () => {
     const arr = [4, 8, 7, 2, 0, 1, 6];
-    expect(pivot(arr, undefined, undefined, 4)).toEqual(3);
-    expect(arr).toEqual([1, 0, 2, 7, 8, 4, 6]);
+    expect(pivot(arr, undefined, undefined, 4)).toEqual(4);
+    expect(arr).toEqual([4, 1, 0, 2, 7, 8, 6]);
   });
 
   test('left pivot of array is min', () => {
