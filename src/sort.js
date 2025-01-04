@@ -6,7 +6,7 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
     return low;
   }
   if (pivot === undefined) {
-    pivot = arr[(low + high)/2];
+    pivot = arr[Math.floor((low + high)/2)];
   }
   let i = low ;
   let j = high;
