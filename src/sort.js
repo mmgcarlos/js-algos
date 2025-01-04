@@ -22,7 +22,7 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
 
 const quickSort = (arr, from = 0, to = arr.length - 1) => {
   if (from >= to) {
-    return;
+    return arr;
   }
   let pivotPos = pivot(arr, from, to);
   quickSort(arr, from, pivotPos - 1);
