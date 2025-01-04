@@ -7,24 +7,24 @@ describe('Sorting Functions', () => {
   });
 
   test('pivot of array of size 1 is zero', () => {
-    expect(pivot([4])).toEqual(1);
+    expect(pivot([4])).toEqual(0);
   });
 
   test('pivot of array', () => {
     const arr = [4, 6, 7, 2, 0, 1, 8];
-    expect(pivot(arr)).toEqual(3);
+    expect(pivot(arr)).toEqual(2);
     expect(arr).toEqual([1, 0, 2, 7, 6, 4, 8]);
   });
   
   test('rigth pivot of array', () => {
     const arr = [4, 8, 7, 2, 0, 1, 6];
-    expect(pivot(arr, undefined, undefined, 6)).toEqual(5);
+    expect(pivot(arr, undefined, undefined, 6)).toEqual(4);
     expect(arr).toEqual([4, 6, 1, 2, 0, 7, 8]);
   });
 
   test('rigth pivot of array is max', () => {
     const arr = [4, 6, 7, 2, 0, 1, 8];
-    expect(pivot(arr, undefined, undefined, 8)).toEqual(7);
+    expect(pivot(arr, undefined, undefined, 8)).toEqual(6);
     expect(arr).toEqual([4, 6, 7, 2, 0, 1, 8]);
   });
 
