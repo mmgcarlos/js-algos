@@ -1,4 +1,4 @@
-const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
+const hoarePivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   if (high === -1) {
     return undefined;
   }
@@ -18,9 +18,9 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   }
 };
 
-const quickSort = (arr, from = 0, to = arr.length - 1) => {
+const quickSort = (arr, from = 0, to = arr.length - 1, pivotFunc = hoarePivot) => {
   if (from < to) {
-    let pivotPos = pivot(arr, from, to);
+    let pivotPos = pivotFunc(arr, from, to);
     quickSort(arr, from, pivotPos - 1);
     quickSort(arr, pivotPos, to);
   }
@@ -72,6 +72,7 @@ module.exports = {
   bubbleSort,
   selectionSort,
   insertionSort,
-  pivot,
+  pivot: hoarePivot,
+  hoarePivot,
   quickSort
 };
