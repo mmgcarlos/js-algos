@@ -10,13 +10,12 @@ const pivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   }
   let i = low - 1;
   let j = high + 1;
-  while (i <= j) {
+  while (true) {
     do { i++; } while (arr[i] < pivot);
     do { j--; } while (arr[j] > pivot);
     if (i >= j) { return j; }
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
-  return j;
 };
 
 const quickSort = (arr, from = 0, to = arr.length - 1) => {
