@@ -1,3 +1,18 @@
+const lomutoPivot = (arr, low = 0, high = arr.length - 1, pivot) => {
+  if (pivot === undefined) {
+    pivot = arr[high];
+  }
+  let swapPos = low;
+  for (let i = 0; i < high; i++) {
+    if (pivot > arr[i]) {
+      [arr[swapPos], arr[i]] = [arr[i], arr[swapPos]];
+      swapPos++;
+    }
+    [arr[swapPos], arr[high]] = [arr[high], arr[swapPos]];
+  }
+  return swapPos;
+};
+
 const hoarePivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   if (high === -1) {
     return undefined;
