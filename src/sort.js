@@ -89,5 +89,6 @@ module.exports = {
   insertionSort,
   pivot: hoarePivot,
   hoarePivot,
+  lomutoPivot,
   quickSort
 };
