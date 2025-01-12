@@ -1,6 +1,14 @@
-const { quickSort, hoarePivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
+const { quickSort, lomutoPivot, hoarePivot, bubbleSort, selectionSort, insertionSort } = require('../src/sort');
 
 describe('Sorting Functions', () => {
+
+  test('lomutoPivot of empty array is undefined', () => {
+    expect(lomutoPivot([])).toEqual(undefined);
+  });
+
+  test('lomutoPivot of array of size 1 is zero', () => {
+    expect(lomutoPivot([4])).toEqual(0);
+  });
 
   test('hoarePivot of empty array is undefined', () => {
     expect(hoarePivot([])).toEqual(undefined);
