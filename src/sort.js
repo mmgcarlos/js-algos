@@ -13,6 +13,10 @@ const lomutoPivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   return swapPos;
 };
 
+const hoareLimitP1 = (x) => x;
+
+const hoareLimitP2 = (x) => x + 1;
+
 const hoarePivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   if (high === -1) {
     return undefined;
@@ -33,11 +37,17 @@ const hoarePivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   }
 };
 
-const quickSort = (arr, from = 0, to = arr.length - 1, pivotFunc = hoarePivot) => {
+const hoarePivotFuncs = {
+    limitP1: hoareLimitP1,
+    limitP2: hoareLimitP2,
+    pivot: hoarePivot
+};
+
+const quickSort = (arr, from = 0, to = arr.length - 1, pivotFuncs = hoarePivotFuncs) => {
   if (from < to) {
-    let pivotPos = pivotFunc(arr, from, to);
-    quickSort(arr, from, pivotPos);
-    quickSort(arr, pivotPos + 1, to);
+    let pivotPos = pivotFuncs.pivot(arr, from, to);
+    quickSort(arr, from, pivotFuncs.limitP1(pivotPos));
+    quickSort(arr, pivotFuncs.limitP2(pivotPos), to);
   }
   return arr;
 };
