@@ -1,3 +1,7 @@
+const lomutoLimitP1 = (x) => x - 1;
+
+const lomutoLimitP2 = (x) => x + 1;
+
 const lomutoPivot = (arr, low = 0, high = arr.length - 1, pivot) => {
   if (pivot === undefined) {
     pivot = arr[high];
@@ -11,6 +15,12 @@ const lomutoPivot = (arr, low = 0, high = arr.length - 1, pivot) => {
     [arr[swapPos], arr[high]] = [arr[high], arr[swapPos]];
   }
   return swapPos;
+};
+
+const lomutoPivotFuncs = {
+    limitP1: lomutoLimitP1,
+    limitP2: lomutoLimitP2,
+    pivot: lomutoPivot
 };
 
 const hoareLimitP1 = (x) => x;
@@ -100,5 +110,7 @@ module.exports = {
   pivot: hoarePivot,
   hoarePivot,
   lomutoPivot,
+  lomutoPivotFuncs,
+  hoarePivotFuncs,
   quickSort
 };
