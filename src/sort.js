@@ -10,7 +10,7 @@ const lomutoPivot = (arr, low = 0, high = arr.length - 1, pivot) => {
     pivot = arr[high];
   }
   let swapPos = low;
-  for (let i = high; i > 0; i--) {
+  for (let i = 0; i < high; i++) {
     if (pivot > arr[i]) {
       [arr[swapPos], arr[i]] = [arr[i], arr[swapPos]];
       swapPos++;
