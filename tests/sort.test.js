@@ -10,6 +10,12 @@ describe('Sorting Functions', () => {
     expect(lomutoPivot([4])).toEqual(0);
   });
 
+  test('lomutoPivot of array', () => {
+    const arr = [4, 6, 7, 8, 0, 1, 2];
+    expect(lomutoPivot(arr)).toEqual(2);
+    expect(arr).toEqual([1, 0, 2, 7, 6, 4, 8]);
+  });
+
   test('hoarePivot of empty array is undefined', () => {
     expect(hoarePivot([])).toEqual(undefined);
   });
