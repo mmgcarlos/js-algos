@@ -3,6 +3,9 @@ const lomutoLimitP1 = (x) => x - 1;
 const lomutoLimitP2 = (x) => x + 1;
 
 const lomutoPivot = (arr, low = 0, high = arr.length - 1, pivot) => {
+  if (high === -1) {
+    return undefined;
+  }
   if (pivot === undefined) {
     pivot = arr[high];
   }
