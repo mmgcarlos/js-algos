@@ -12,7 +12,7 @@ describe('Sorting Functions', () => {
 
   test('lomutoPivot of array', () => {
     const arr = [4, 6, 7, 8, 0, 1, 2];
-    //expect(lomutoPivot(arr)).toEqual(2);
+    expect(lomutoPivot(arr)).toEqual(2);
     expect(arr).toEqual([0, 1, 2, 8, 4, 6, 7]);
   });
 
