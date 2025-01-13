@@ -27,3 +27,8 @@ const rotate = (arr, n) => {
   reverse(arr, 0, n);
   reverse(arr, n + 1, to);
 };
+
+module.exports = {
+  reverse,
+  rotate
+};
