@@ -7,6 +7,7 @@ const reverse = (arr, from, to = arr.length - 1) => {
     i++;
     j--;
   }
+  return arr;
 };
 
 const rotate = (arr, n) => {
@@ -26,6 +27,7 @@ const rotate = (arr, n) => {
   reverse(arr, 0, to);
   reverse(arr, 0, n);
   reverse(arr, n + 1, to);
+  return arr;
 };
 
 module.exports = {
