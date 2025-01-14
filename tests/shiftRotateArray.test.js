@@ -1,4 +1,4 @@
-const { reverse } = require('../src/shiftRotateArray');
+const { reverse, rotate } = require('../src/shiftRotateArray');
 
 describe('Reverse array', () => {
 
