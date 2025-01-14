@@ -1,4 +1,4 @@
-const reverse = (arr, from, to = arr.length - 1) => {
+const reverse = (arr, from = 0, to = arr.length - 1) => {
   let i = from;
   let j = to;
 
