@@ -20,7 +20,7 @@ const rotate = (arr, n) => {
   } else if (n >= arr.length) {
     n = n % arr.length;
   }
-  let to = arr.lenght - 1;
+  let to = arr.length - 1;
   reverse(arr, 0, to);
   reverse(arr, 0, n - 1);
   reverse(arr, n, to);
