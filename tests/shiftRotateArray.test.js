@@ -25,7 +25,15 @@ describe('Rotate array', () => {
   test('Rotate array size 1', () => {
     expect(rotate([1], 4)).toEqual([1]);
   });
+  
+  test('Rotate 0 positions', () => {
+    expect(rotate([1, 2, 3], 0)).toEqual([1, 2, 3]);
+  });
 
+  test('Rotate 0 positions n times', () => {
+    expect(rotate([1, 2, 3], 6)).toEqual([1, 2, 3]);
+  });
+  
   test('Rotate 1 position', () => {
     expect(rotate([1, 2, 3], 1)).toEqual([3, 1, 2]);
   });
