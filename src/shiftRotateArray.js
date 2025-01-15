@@ -22,8 +22,8 @@ const rotate = (arr, n) => {
   }
   let to = arr.lenght - 1;
   reverse(arr, 0, to);
-  reverse(arr, 0, n);
-  reverse(arr, n + 1, to);
+  reverse(arr, 0, n - 1);
+  reverse(arr, n, to);
   return arr;
 };
 
