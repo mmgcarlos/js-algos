@@ -14,7 +14,7 @@ const rotate = (arr, n) => {
   if (arr.length <= 1) {
     return arr;
   } else if (n < 0 || n >= arr.length) {
-    n = n % arr.length);
+    n = n % arr.length;
   } else if (n === 0) {
     return arr;
   }
