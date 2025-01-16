@@ -13,12 +13,10 @@ const reverse = (arr, from = 0, to = arr.length - 1) => {
 const rotate = (arr, n) => {
   if (arr.length <= 1) {
     return arr;
-  } else if (n < 0) {
-    n = arr.length - (n % arr.length);
+  } else if (n < 0 || n >= arr.length) {
+    n = n % arr.length);
   } else if (n === 0) {
     return arr;
-  } else if (n >= arr.length) {
-    n = n % arr.length;
   }
   let to = arr.length - 1;
   reverse(arr, 0, to);
